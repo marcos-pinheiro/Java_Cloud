@@ -19,7 +19,7 @@ import lombok.EqualsAndHashCode;
 
 @Entity @Table(name = "dog")
 @Data @EqualsAndHashCode
-public final class Dog implements Serializable {
+public class Dog implements Serializable {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
