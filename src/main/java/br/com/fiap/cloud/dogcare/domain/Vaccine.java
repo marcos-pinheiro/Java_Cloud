@@ -30,7 +30,10 @@ public class Vaccine {
 	@JsonIgnore @JsonBackReference
 	private Dog dog;
 	
+	//@Column(name = "vaccine_date")
+	//@Convert(converter = DateConverter.class)
+	//private LocalDate date;
 	
-	public Vaccine() {	
+	public Vaccine() {
 	}
 }

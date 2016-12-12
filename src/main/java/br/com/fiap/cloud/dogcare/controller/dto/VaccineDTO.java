@@ -8,6 +8,8 @@ public class VaccineDTO {
 
 	private String name;
 	
+	//private LocalDate date;
+	
 	public VaccineDTO() {
 		
 	}

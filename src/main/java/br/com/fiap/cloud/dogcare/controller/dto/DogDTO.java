@@ -29,7 +29,7 @@ public class DogDTO {
 		if(this.getVaccines() != null) {
 			dog.setVaccines(this.getVaccines()
 				.stream()
-				.map(d -> new Vaccine(0, d.getName(), dog))
+				.map(d -> new Vaccine(0, d.getName(), dog /*,d.getDate()*/))
 				.collect(Collectors.toList()));
 		}
 		
