@@ -3,7 +3,7 @@ package br.com.fiap.cloud.dogcare.controller.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Data @AllArgsConstructor
+//@Data @AllArgsConstructor
 public class VaccineDTO {
 
 	private String name;
@@ -13,5 +13,19 @@ public class VaccineDTO {
 	public VaccineDTO() {
 		
 	}
+	
+	public VaccineDTO(String name) {
+		super();
+		this.name = name;
+	}
 
+
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}	
 }

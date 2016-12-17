@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +25,6 @@ import br.com.fiap.cloud.dogcare.service.exception.APIException;
 public class FormController {
 
 	@Autowired VaccineService vaccineServiceImpl;
-
 
 	@RequestMapping(value = "/dogcare", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	protected ResponseEntity<DogDTO> create(@RequestBody DogDTO dto, UriComponentsBuilder uriBuilder) throws APIException {

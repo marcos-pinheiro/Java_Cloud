@@ -18,7 +18,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Entity @Table(name = "dog")
-@Data @EqualsAndHashCode
+/*@Data @EqualsAndHashCode*/
 public class Dog implements Serializable {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,6 +32,38 @@ public class Dog implements Serializable {
 	@OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER, mappedBy = "dog")
 	private List<Vaccine> vaccines;
 	
-	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getRg() {
+		return rg;
+	}
+
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+
+	public List<Vaccine> getVaccines() {
+		return vaccines;
+	}
+
+	public void setVaccines(List<Vaccine> vaccines) {
+		this.vaccines = vaccines;
+	}
+
 	private static final long serialVersionUID = 1L;
 }

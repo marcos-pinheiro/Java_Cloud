@@ -17,7 +17,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Entity @Table(name = "vaccine")
-@Data @AllArgsConstructor @EqualsAndHashCode
+//@Data @AllArgsConstructor @EqualsAndHashCode
 public class Vaccine {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,4 +36,37 @@ public class Vaccine {
 	
 	public Vaccine() {
 	}
+
+	public Vaccine(int id, String name, Dog dog) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.dog = dog;
+	}
+
+
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Dog getDog() {
+		return dog;
+	}
+
+	public void setDog(Dog dog) {
+		this.dog = dog;
+	}	
 }
