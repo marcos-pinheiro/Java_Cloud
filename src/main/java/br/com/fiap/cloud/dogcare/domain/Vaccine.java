@@ -18,11 +18,10 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Entity @Table(name = "vaccine")
-//@Data @AllArgsConstructor @EqualsAndHashCode
+@AllArgsConstructor @EqualsAndHashCode
 public class Vaccine {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -73,5 +72,13 @@ public class Vaccine {
 
 	public void setDog(Dog dog) {
 		this.dog = dog;
-	}	
+	}
+	
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	
+	public Date getDate() {
+		return date;
+	}
 }

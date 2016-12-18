@@ -5,9 +5,8 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 
-//@Data @AllArgsConstructor
+@AllArgsConstructor
 public class VaccineDTO {
 
 	private String name;
@@ -32,5 +31,13 @@ public class VaccineDTO {
 
 	public void setName(String name) {
 		this.name = name;
-	}	
+	}
+	
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	
+	public Date getDate() {
+		return date;
+	}
 }
