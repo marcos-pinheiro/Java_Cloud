@@ -51,7 +51,7 @@ public class FormController {
 			dto.setId(dog.getId());
 			dto.setName(dog.getName());
 			dto.setRg(dog.getRg());
-			dto.setVaccines(dog.getVaccines().stream().map(d -> new VaccineDTO(d.getName()/*, d.getDate()*/)).collect(Collectors.toSet()));
+			dto.setVaccines(dog.getVaccines().stream().map(d -> new VaccineDTO(d.getName(), d.getDate())).collect(Collectors.toSet()));
 			
 			return ResponseEntity.ok(dto);
 		}
