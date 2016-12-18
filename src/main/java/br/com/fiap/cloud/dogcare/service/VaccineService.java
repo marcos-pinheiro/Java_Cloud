@@ -1,5 +1,6 @@
 package br.com.fiap.cloud.dogcare.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import br.com.fiap.cloud.dogcare.domain.Dog;
@@ -10,4 +11,8 @@ public interface VaccineService {
 	Dog register(Dog dog) throws DocumentConflictException;
 
 	Optional<Dog> getById(int id);
+	
+	void delete(int id);
+	
+	List<Dog> listAll();
 }

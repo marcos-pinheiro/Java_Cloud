@@ -2,6 +2,7 @@ package br.com.fiap.cloud.dogcare.service;
 
 import static java.util.Objects.nonNull;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,5 +42,18 @@ public class VaccineServiceImpl implements VaccineService {
 	public Optional<Dog> getById(int id) {		
 		return Optional
 				.ofNullable(vaccineRepository.findOne(id));
+	}
+
+
+	@Override
+	public List<Dog> listAll() {
+		return vaccineRepository.findAll();
+	}
+
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
 	}
 }
